@@ -1,0 +1,827 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tinos&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    
+    background-color: wheat;
+   height: 100px;
+
+}
+
+
+.nav-bar{
+    transition: 0.5s ease-in;
+    width: 90%;
+    background-color: wheat;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin: -40px;
+  border-radius: 10px;
+  animation-name: cafeHeaderTopical;
+  animation-duration: 2s;
+  transition: 0.5s ease-in;
+  animation-fill-mode: forwards;
+
+}
+/* Her er CSS-en til menu linken */
+.nav-bar .nav .link{
+    list-style-type: none;
+    display: inline;
+    padding:8px;
+    font-size: 18px;
+    margin: 8px;
+   
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+/*  */
+.nav{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.link:hover{
+background-color:   white ;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    border-radius: 5px;
+}
+.side-nav {
+    display: none;
+}
+
+.reservationbtn{
+  
+    background-color: rgba(210, 105, 30, 0.866);
+    border-radius: 10px;
+    border-width:0px ;
+    color: white;
+    height: 32px;
+    width: 100px;
+    cursor: pointer;
+   
+   float: right;
+   margin-top: -47px;
+margin-right: 150px;
+animation-name: cafeButtonTopical;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+margin-top: 2px;
+  }
+
+  .reservationbtn:hover{
+   
+    background-color: chocolate;
+    transition: 0.2 all ease ;
+
+   
+        
+  }
+  .logoimg{
+    margin-top: 10px;
+    width: 100px;
+    position: relative;
+    top: 10px;
+    
+  }
+  a{
+    color: black;
+    text-decoration: none;
+}
+/* https://codepen.io/nfo94/pen/VqoXgY  making hamburger menu */
+@media only screen and (max-width: 803px) {
+    .nav-bar{
+        width: 200px;
+        height: 100%;
+        position: fixed;
+        overflow: hidden;
+        z-index: -1;
+        top: 64px;
+    }
+    .nav a{
+        display: block;
+        padding: 20px;
+        color: black;
+    }
+    .nav a:hover{
+        background-color: white;
+        
+    }
+    .nav-bar{
+     max-height: 0;
+        max-width: 0;
+        transition: max-height .5s ease-in;
+    }
+    a{
+        text-decoration: none;
+    }
+    .nav{
+        display: table;
+    }
+    .header{
+       
+        
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: wheat;
+        z-index: 2;
+        
+    }
+ 
+
+    
+    /* Navigation Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+/* Style label tag */
+/* Here I design the middle line */
+.hamb-line {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag to make hamburger navigation bar */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+/* Here I design the last line */
+.hamb-line::before{
+    top: 5px;
+}
+/* Here I design the first line */
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-nav {
+    display: none;
+} /* Hide checkbox */
+
+/* Here i expand the navnbar*/
+.side-nav:checked ~ .nav-bar{
+    max-width: 100%;
+    max-height: 100%;
+    transition: max-height .5s ease-in;
+}
+/* Here i hide the middle line */
+.side-nav:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+/* Here i desing the "X" */
+.side-nav:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-50deg);
+    top:0;
+}
+.side-nav:checked ~ .hamb .hamb-line::after {
+    transform: rotate(50deg);
+    top:0;
+}
+.reservationbtn{
+    margin-top: 22px;
+    margin-right: 10px;
+}
+.logoimg{
+    width: 110px;
+    top: 0;
+}
+
+.nav-bar{
+    margin-top: -9px;
+}
+.title{
+    width: 100%;
+
+}
+
+  }
+
+  @media only screen and (max-width: 1035px) {
+   .nav-bar{
+    
+    margin-right: 250px;
+   }
+
+  }
+
+  @media only screen and (max-width: 942px) {
+    .reservationbtn{
+     
+     margin-right: 2px;
+    }
+   }
+
+
+
+
+   .Content{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  
+  
+  }
+  .title{
+    width: 80%;
+    height: 300px;
+    border-radius: 15px;
+    background-image: url("img/smartphone.jpg");
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: calc(10px + 2vmin);
+    background-color: white;
+  }
+
+  .elements{
+    width: 80%;
+    border-radius: 15px;
+   background-color: #57b1e5;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;  
+    font-size: calc(10px + 2vmin);
+    background-color: white;
+   
+  }
+  .btnGetStarted{
+  background-color: white;
+    border-radius: 15px;
+    border-width:0px ;
+    color: black;
+  height: 50px;
+    width: 200px;
+    cursor: pointer;
+  
+  }
+  .info {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+ 
+  .info .info-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+
+.articleImg {
+    width: 100%;
+    height: 257px;
+    border: 10px solid white;
+    box-shadow: grey 3px 3px 3px 3px;
+  }
+  h2{
+    text-align: center;
+    width: 100%;
+  }
+
+  #elements p {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 10px;
+    margin-block-start: -0.33em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 21px;
+    margin-inline-end: 0px;
+    margin-right: 100px;
+    line-height: 1.5;
+    font-family: "Tinos", serif;
+  font-weight: 500;
+  }
+
+  .journalist {
+    font-size: 20px;
+    font-style: italic;
+    color: grey;
+    text-align: right;
+    margin-right: 0;
+    width: 175px;
+    padding: 0;
+   
+  }
+
+  .picRight
+    {
+       
+            width: 300px;
+            height: 257px;
+            float: right;
+            margin-top: 5px;
+            margin-right: -5px;
+            margin-left: 8px;
+            margin-bottom: 20px;
+
+      
+    
+  }
+
+  @media only screen and (max-width: 800px) {
+    .reservationbtn{
+     
+     margin-right: 10px;
+    }
+    .elements{
+        width: 100%;
+        
+    }
+   }
+
+
+
+
+   .picLeft
+    {
+       
+            width: 300px;
+            height: 257px;
+            float: left;
+            margin-top: 5px;
+        
+            margin-left: 8px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+      
+    
+  }
+  @media only screen and (max-width: 427px) {
+    .picLeft, .picRight{
+       width: 100%;
+       margin-right: auto;
+       margin-left: auto;
+       text-align: center;
+       margin-bottom: 30px;
+    }
+      }
+   
+      sub{
+        unicode-bidi: isolate;
+    white-space: nowrap;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 80%;
+    line-height: 1;
+      }
+
+
+      sub a{
+        text-decoration: none;
+    color: #0645ad;
+    background: none;
+      }
+
+
+      .articleLinks{
+        
+        max-width: 800px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .articleLinks a{
+        
+        color: #0645ad;
+        text-decoration: none;
+      }
+
+
+
+
+    
+    
+.bookingForm{
+  width: 70%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid ;
+}
+.bookingForm form{
+  width: 70%;
+
+}
+
+
+input[type=text] {
+  
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=button] {
+ background-color: white;
+ border: solid 2px black;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=button]:hover {
+  background-color: black;
+  color: #fff;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  
+ }
+
+
+@media screen and (max-width: 800px)  {
+  .bookingForm{
+  width: 100%;
+  }
+}
+
+.logoDiv{
+  width: 100px;
+ 
+}
+
+@media screen and (max-width: 1009px)  {
+  .nav-bar{
+    margin-left: -14px;
+  }
+}
+
+
+
+
+#menu {
+  background-color: #523b1d;
+  border: none;
+  color: white;
+  padding: 15px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+.centered h1,
+h4 {
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.centered h1 {
+  font-size: 40px;
+  background-color: #6c564e;
+  font-family: cursive;
+}
+h4 {
+  font-size: 25px;
+}
+#meny {
+  width: 95px;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 25px;
+  border-bottom: solid silver 4px;
+  font-size: 35px;
+  font-weight: 200;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.cover-div {
+  width: 100%;
+}
+.cover {
+  width: 100%;
+  height: 764px;
+}
+
+.centered {
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgb(189, 179, 174);
+  max-width: 540px;
+  width: 100%;
+  border-radius: 86px;
+}
+
+.meny {
+  width: 100%;
+}
+
+.meny img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.meny {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  border-bottom: solid 4px silver;
+  width: 93px;
+  margin-top: 44px;
+  font-size: 27px;
+  font-weight: 300;
+}
+span {
+  color: red;
+  float: right;
+  position: absolute;
+}
+
+.mat {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.mat .description h5 {
+  margin-left: 5px;
+  text-transform: capitalize;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.mat .description {
+  margin-left: 12px;
+}
+
+.menyretter {
+  margin: 24px;
+}
+em {
+  margin-top: 4px;
+  color: gray;
+}
+.p p {
+  background-color: #00000053;
+  width: 369px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  max-width: 369px;
+  width: 100%;
+}
+
+.p {
+  margin: 40px;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.Footer {
+  width: 100%;
+  height: 30vmin;
+  border-radius: 0px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: calc(10px + 2vmin);
+  background-color: black;
+}
+
+
+
+
+.about h1{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: bold;
+  color: black;
+}
+
+#p1{
+  text-align: center;
+  text-decoration-line: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#p2{
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.about h4{
+  text-align: center;
+  font-weight: bold;
+  color: rgb(1, 1, 1);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+}
+
+
+#img1 {
+  width: 50%;
+}
+
+#img2 {
+  width: 50%;
+}
+
+.gallery{
+  text-align: center;
+}
+
+#cathering{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#cateringp{
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgb(198, 239, 239);
+  font-weight: bolder; 
+  font-size: 21px;
+  font-weight: 300;
+  clear: both;
+  text-align: center;
+
+}
+
+.endpage{
+  margin-top: 0;
+  box-sizing: content-box;
+  color: aliceblue;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #b19355;
+  font-weight: bolder;
+  font-size: 21px;
+  font-weight: 300;
+  clear: both;
+  text-align: center;
+}
+section{
+  background-image: url("img/about.jpeg");
+  background-size: cover;
+  height: calc(90vh - 10px);
+
+}
+
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 100px;
+}
+
+.container:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(50px);
+}
+
+.content-box{
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+  border: solid black;
+}
+
+.left{
+  height: 100%;
+}
+
+.right{
+  padding: 25px 40px;
+}
+
+.contact-box h2{
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+ 
+  text-align: center;
+}
+
+.field{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: .3s;
+}
+
+.field:focus{
+  background-color: #fff;
+  border: 2px solid rgba(30, 85, 250, 0.47);
+}
+
+.area{
+  min-height: 150px;   
+}
+
+.btn{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+  border: solid 2px black;
+  color: black;
+  transition: .3s;
+}
+
+.btn:hover{ 
+  background-color: black;
+  color: white;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+@media screen and (max-width:880px){
+  .contact.box{
+      grid-template-columns: 1fr;
+  }
+
+  .left{
+      height: 200px;
+  }
+}
+
+.endpage p{
+  width: 100%;
+}
